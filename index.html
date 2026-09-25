@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>LarpBox</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="playList">
+      <div></div>
+    </div>
+    <div class="musicPlayer">
+      <div class="vinyl">
+        <img src="sprites/borderline.jfif" class="albumArt" alt="" />
+      </div>
+      <h1>Song Name</h1>
+      <div class="volume">
+        <input
+          id="playbackRange"
+          type="range"
+          value="50"
+          min="0"
+          max="100"
+          onmousemove="vol()"
+          onclick="vol()"
+        />
+        <progress id="playbackProgress" value="50" min="0" max="100"></progress>
+      </div>
+      <div class="controls">
+        <button class="btn loop"><img src="sprites/loop.svg" alt="" /></button>
+        <button class="btn fav"><img src="sprites/fav.svg" alt="" /></button>
+        <button class="btn prev"><img src="sprites/next.svg" alt="" /></button>
+        <button class="btn playPause">
+          <img src="sprites/pause.svg" alt="" />
+        </button>
+        <button class="btn next"><img src="sprites/next.svg" alt="" /></button>
+
+        <div class="volume">
+          <input
+            id="range"
+            type="range"
+            value="50"
+            min="0"
+            max="100"
+            onmousemove="vol()"
+            onclick="vol()"
+          />
+          <progress id="progress" value="50" min="0" max="100"></progress>
+        </div>
+      </div>
+    </div>
+    <div class="queue">
+      <div></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
