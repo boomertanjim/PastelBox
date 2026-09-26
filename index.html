@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>LarpBox</title>
+    <title>PastelBox</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,8 +40,8 @@
       </div>
 
       <div class="volume">
-        <input id="playbackRange" type="range" value="50" min="0" max="100" />
-        <progress id="playbackProgress" value="50" min="0" max="100"></progress>
+        <input id="playbackRange" type="range" value="0" min="0" max="100" />
+        <progress id="playbackProgress" value="0" min="0" max="100"></progress>
       </div>
       <div class="controls">
         <div>
@@ -60,7 +60,7 @@
           <input
             id="range"
             type="range"
-            value="0"
+            value="50"
             min="0"
             max="100"
             onmousemove="vol()"
@@ -68,7 +68,7 @@
             onmouseup="vol()"
             onmousedown="vol()"
           />
-          <progress id="progress" value="0" min="0" max="100"></progress>
+          <progress id="progress" value="50" min="0" max="100"></progress>
         </div>
       </div>
     </div>
