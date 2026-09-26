@@ -12,7 +12,7 @@ Search Bar works on both the song title and artist name for easy access.
 
 PastelBox uses mp3 metadata to show cover art in the vinyl in the middle. The vinyl spins infinitely for cool effect.
 
-<span style="color: red">!IMPORTANT:</span>
+### Important
 After opening the website, please wait for 2-3 minutes for all the songs to load.
 
 ### Screenshots
