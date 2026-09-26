@@ -7,6 +7,8 @@ It features a dynamic playlist, a queue system, music controls, searching, loopi
 
 Currently there are 12 loaded songs in here. I will add the feature to include custom mp3's in the future updates.
 
+<img width="960" height="438" alt="PastelBox" src="https://github.com/user-attachments/assets/cfc77b26-75c0-4785-a95d-1ab70fdb2f75" />
+
 Features:
 1. Play/Pause Controls
 2. Next-Track switching
