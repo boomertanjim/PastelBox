@@ -38,11 +38,11 @@ After opening the website, please wait for 2-3 minutes for all the songs to load
 
 ## Built With
 
--HTML5
--CSS3
--Javascript
--HTML Audio Api
--jsmediatags
+- HTML5
+- CSS3
+- Javascript
+- HTML Audio Api
+- jsmediatags
 
 ## Help
 1. The songs aren't loading
