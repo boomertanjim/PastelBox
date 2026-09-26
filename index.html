@@ -7,58 +7,115 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="playList">
-      <div></div>
+      <div id="playlist">
+        <div class="searchHeader">
+          <h2>Playlist</h2>
+          <input id="search" type="text" placeholder="Find Songs..." />
+        </div>
+        <!-- <div class="playlistCards">
+          <div class="playlistNames">
+            <h3>Borderline</h3>
+            <p>Tame Impala</p>
+          </div>
+          <div class="playlistCovers">
+            <img src="sprites/borderline.jfif" alt="" />
+            <div class="overlay">+</div>
+          </div>
+        </div> -->
+      </div>
     </div>
     <div class="musicPlayer">
       <div class="vinyl">
-        <img src="sprites/borderline.jfif" class="albumArt" alt="" />
+        <img src="sprites/coverDummy.jpg" class="albumArt" id="cover" alt="" />
       </div>
-      <h1>Song Name</h1>
+      <div>
+        <h1 id="title">No Song Playing</h1>
+        <h3 id="artist">Unknown Artist</h3>
+      </div>
+
       <div class="volume">
-        <input
-          id="playbackRange"
-          type="range"
-          value="50"
-          min="0"
-          max="100"
-          onmousemove="vol()"
-          onclick="vol()"
-        />
+        <input id="playbackRange" type="range" value="50" min="0" max="100" />
         <progress id="playbackProgress" value="50" min="0" max="100"></progress>
       </div>
       <div class="controls">
-        <button class="btn loop"><img src="sprites/loop.svg" alt="" /></button>
-        <button class="btn fav"><img src="sprites/fav.svg" alt="" /></button>
-        <button class="btn prev"><img src="sprites/next.svg" alt="" /></button>
-        <button class="btn playPause">
-          <img src="sprites/pause.svg" alt="" />
-        </button>
-        <button class="btn next"><img src="sprites/next.svg" alt="" /></button>
+        <div>
+          <button class="btn playPause" onclick="playPause()">
+            <img src="sprites/play.svg" alt="" id="change" />
+          </button>
+          <button class="btn next">
+            <img src="sprites/next.svg" alt="" />
+          </button>
+          <button class="btn loop">
+            <img src="sprites/loop.svg" alt="" />
+          </button>
+        </div>
 
         <div class="volume">
           <input
             id="range"
             type="range"
-            value="50"
+            value="0"
             min="0"
             max="100"
             onmousemove="vol()"
             onclick="vol()"
+            onmouseup="vol()"
+            onmousedown="vol()"
           />
-          <progress id="progress" value="50" min="0" max="100"></progress>
+          <progress id="progress" value="0" min="0" max="100"></progress>
         </div>
       </div>
     </div>
     <div class="queue">
-      <div></div>
+      <div id="queue">
+        <div class="header">
+          <h2>Current Queue</h2>
+        </div>
+        <!-- <div class="queueCards">
+          <div class="queueNames">
+            <h3>Borderline</h3>
+            <p>Tame Impala</p>
+            <div class="queueControls">
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <path
+                    fill="#674441"
+                    d="M232.7 69.9L224 96L128 96C110.3 96 96 110.3 96 128C96 145.7 110.3 160 128 160L512 160C529.7 160 544 145.7 544 128C544 110.3 529.7 96 512 96L416 96L407.3 69.9C402.9 56.8 390.7 48 376.9 48L263.1 48C249.3 48 237.1 56.8 232.7 69.9zM512 208L128 208L149.1 531.1C150.7 556.4 171.7 576 197 576L443 576C468.3 576 489.3 556.4 490.9 531.1L512 208z"
+                  />
+                </svg>
+              </button>
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <path
+                    fill="#674441"
+                    d="M342.6 73.4C330.1 60.9 309.8 60.9 297.3 73.4L137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7C149.8 291.2 170.1 291.2 182.6 278.7L288 173.3L288 544C288 561.7 302.3 576 320 576C337.7 576 352 561.7 352 544L352 173.3L457.4 278.7C469.9 291.2 490.2 291.2 502.7 278.7C515.2 266.2 515.2 245.9 502.7 233.4L342.7 73.4z"
+                  />
+                </svg>
+              </button>
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <path
+                    fill="#674441"
+                    d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="queueCovers">
+            <img src="sprites/borderline.jfif" alt="" />
+          </div>
+        </div> -->
+      </div>
     </div>
 
+    <script src="jsmediatags.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
