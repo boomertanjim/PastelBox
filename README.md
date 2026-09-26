@@ -1,5 +1,8 @@
 PastelBox is a lightweight, web-based jukebox that plays requested songs. It is designed in a pastel-like design for calm music listening.
 
+!IMPORTANT:
+After opening the website, please wait for 2-3 minutes or all the songs to load.
+
 It features a dynamic playlist, a queue system, music controls, searching, looping.
 
 Currently there are 12 loaded songs in here. I will add the feature to include custom mp3's in the future updates.
