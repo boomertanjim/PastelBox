@@ -51,4 +51,5 @@ After opening the website, please wait for 2-3 minutes for all the songs to load
    - Try to zoom out a bit as I didn't add responsiveness( I will try to add that on the next update )
 
 ## License
-This project is made by Tanojimo (Tanjim Rahman)
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
