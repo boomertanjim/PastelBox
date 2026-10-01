@@ -345,7 +345,6 @@ h3 {
   flex-direction: column;
   gap: 20px;
   min-width: 0;
-  min-width: 0;
 }
 
 .queue > div::-webkit-scrollbar {
